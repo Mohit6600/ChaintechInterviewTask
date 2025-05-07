@@ -103,7 +103,7 @@ fun PasswordDetailsSheetContent(
                 .padding(16.dp)
         ) {
             Text(
-                text = "Password Details",
+                text = "Account Details",
                 style = MaterialTheme.typography.titleMedium,
                 modifier = Modifier.padding(bottom = 16.dp)
             )

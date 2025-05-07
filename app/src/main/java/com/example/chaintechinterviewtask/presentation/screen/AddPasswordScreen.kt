@@ -68,8 +68,7 @@ fun AddPasswordScreen(
             usernameError = false
         }
 
-
-        if (password.isBlank()) {
+        if (password.isBlank() || password.length < 8) {
             passwordError = true
             isValid = false
         } else {
@@ -85,6 +84,7 @@ fun AddPasswordScreen(
 
         return isValid
     }
+
 
     suspend fun savePassword() {
         if (!validateInputs()) {
@@ -151,7 +151,12 @@ fun AddPasswordScreen(
                 onPasswordChange = { password = it },
                 label = "Password",
                 isError = passwordError || passwordMatchError,
-                errorMessage = if (passwordError) "Password is required" else if (passwordMatchError) "Passwords don't match" else "",
+                errorMessage = when {
+                    passwordError && password.length < 8 -> "Password must be at least 8 characters"
+                    passwordError -> "Password is required"
+                    passwordMatchError -> "Passwords don't match"
+                    else -> ""
+                },
                 imeAction = ImeAction.Next
             )
 
