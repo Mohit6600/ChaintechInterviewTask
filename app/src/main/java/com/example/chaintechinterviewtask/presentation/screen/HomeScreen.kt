@@ -93,7 +93,6 @@ fun HomeScreen(
             }
         }
 
-        // Password Details Bottom Sheet
         selectedPasswordId?.let { passwordId ->
             ModalBottomSheet(
                 onDismissRequest = {
@@ -109,14 +108,13 @@ fun HomeScreen(
                         selectedPasswordId = null
                         scope.launch {
                             detailSheetState.hide()
-                            passwords = passwordRepository.getAllPasswords() // Refresh after edit/delete
+                            passwords = passwordRepository.getAllPasswords()
                         }
                     }
                 )
             }
         }
 
-        // Add Password Bottom Sheet
         if (showAddPasswordSheet) {
             ModalBottomSheet(
                 onDismissRequest = {
@@ -131,7 +129,7 @@ fun HomeScreen(
                         showAddPasswordSheet = false
                         scope.launch {
                             addSheetState.hide()
-                            passwords = passwordRepository.getAllPasswords() // Refresh list
+                            passwords = passwordRepository.getAllPasswords()
                         }
                     },
                     onNavigateBack = {

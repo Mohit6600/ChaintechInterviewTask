@@ -11,8 +11,8 @@ data class Password(
     val accountType: String,
     val accountName: String,
     val username: String,
-    val encryptedPassword: String, // Stored encrypted
-    val iv: String, // Initialization vector for encryption
+    val encryptedPassword: String,
+    val iv: String,
     val createdAt: Date = Date(),
     val updatedAt: Date = Date()
 )

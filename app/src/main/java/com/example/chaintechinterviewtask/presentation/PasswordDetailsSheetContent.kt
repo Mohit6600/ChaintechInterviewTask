@@ -147,32 +147,32 @@ fun PasswordDetailsSheetContent(
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 16.dp), // Optional padding to avoid screen edge
+                    .padding(horizontal = 16.dp),
                 horizontalArrangement = Arrangement.Center
             ) {
                 Button(
                     onClick = { showEditDialog = true },
                     modifier = Modifier
                         .weight(1f)
-                        .height(56.dp), // Increased height
+                        .height(56.dp),
                     colors = ButtonDefaults.buttonColors(containerColor = Color.Black)
                 ) {
                     Text(
-                        "Edit", color = Color.White, fontSize = 18.sp // Increased text size
+                        "Edit", color = Color.White, fontSize = 18.sp
                     )
                 }
 
-                Spacer(modifier = Modifier.width(16.dp)) // Space between the two buttons
+                Spacer(modifier = Modifier.width(16.dp))
 
                 Button(
                     onClick = { showDeleteConfirmDialog = true },
                     modifier = Modifier
                         .weight(1f)
-                        .height(56.dp), // Increased height
+                        .height(56.dp),
                     colors = ButtonDefaults.buttonColors(containerColor = Color.Red)
                 ) {
                     Text(
-                        "Delete", color = Color.White, fontSize = 18.sp // Increased text size
+                        "Delete", color = Color.White, fontSize = 18.sp
                     )
                 }
             }

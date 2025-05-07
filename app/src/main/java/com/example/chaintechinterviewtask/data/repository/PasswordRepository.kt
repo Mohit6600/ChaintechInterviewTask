@@ -21,7 +21,7 @@ class PasswordRepository(context: Context) {
 
     suspend fun getAllPasswords(): List<Password> {
         return withContext(Dispatchers.IO) {
-            passwordDao.getAllPasswords() // This query will run on a background thread
+            passwordDao.getAllPasswords()
         }
     }
 

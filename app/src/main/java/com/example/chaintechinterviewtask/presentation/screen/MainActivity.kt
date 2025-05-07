@@ -68,7 +68,6 @@ class MainActivity : FragmentActivity() {
                             }
                         }
                     } else {
-                        // Start biometric auth when the screen first loads
                         LaunchedEffect(Unit) {
                             startBiometricPrompt(
                                 onSuccess = { navigateToHomeScreen() },

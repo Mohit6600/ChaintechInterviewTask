@@ -46,11 +46,11 @@ fun PasswordCard(
                     text = password.accountType,
                     style = MaterialTheme.typography.titleMedium
                 )
-                Spacer(modifier = Modifier.width(8.dp)) // spacing between text and stars
+                Spacer(modifier = Modifier.width(8.dp))
                 Text(
                     text = "********",
                     style = MaterialTheme.typography.titleMedium,
-                    modifier = Modifier.padding(top = 6.dp) // adjust value as needed
+                    modifier = Modifier.padding(top = 6.dp)
 
                 )
             }

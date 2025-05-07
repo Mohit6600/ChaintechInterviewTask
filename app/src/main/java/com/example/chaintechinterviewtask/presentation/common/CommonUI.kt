@@ -125,7 +125,7 @@ fun StandardButton(
             enabled = enabled,
             colors = ButtonDefaults.buttonColors(
                 containerColor = Color.Black,
-                contentColor = Color.White // Optional: sets the text color to white for contrast
+                contentColor = Color.White
             ),
             modifier = Modifier
                 .fillMaxWidth()

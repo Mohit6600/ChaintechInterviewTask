@@ -13,8 +13,7 @@ class CryptoManager {
     private val KEY_ALIAS = "SECURE_PASS_KEY"
     private val ANDROID_KEYSTORE = "AndroidKeyStore"
     private val TRANSFORMATION = "${KeyProperties.KEY_ALGORITHM_AES}/${KeyProperties.BLOCK_MODE_GCM}/${KeyProperties.ENCRYPTION_PADDING_NONE}"
-    private val TAG_LENGTH = 128 // bits
-
+    private val TAG_LENGTH = 128
     private fun getOrCreateKey(): SecretKey {
         val keyStore = KeyStore.getInstance(ANDROID_KEYSTORE).apply {
             load(null)
